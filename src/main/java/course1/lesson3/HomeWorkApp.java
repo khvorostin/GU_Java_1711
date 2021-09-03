@@ -9,7 +9,8 @@ public class HomeWorkApp {
         System.out.println("Задача 1. инвертирование массива");
         int[] arr1 = {1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
         printArray(arr1); // выводим в консоль исходный массив
-        printArray(invertArray(arr1)); // выводим в консоль измененный массив
+        invertArray(arr1);
+        printArray(arr1); // выводим в консоль измененный массив
 
         System.out.println("\nЗадача 2. Создание массива из 100 элементов");
         printArray(getArray(100), ", ");
@@ -17,10 +18,11 @@ public class HomeWorkApp {
         System.out.println("\nЗадача 3. Умножение на 2 элементов массива, которые меньше 6");
         int[] arr2 = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
         printArray(arr2, ", ");
-        printArray(multiplyByTwoElementsLessThanSix(arr2), ", ");
+        multiplyByTwoElementsLessThanSix(arr2);
+        printArray(arr2, ", ");
 
         System.out.println("\nЗадача 4. Создание квадратного массива с диаганалями");
-        createSquare(5);
+        createSquare(7);
 
         System.out.println("\nЗадача 5. Создание массива, все элементы которого равны заданному числу");
         printArray(createArrayWithInitialValues(10, 7), ", ");
@@ -50,16 +52,15 @@ public class HomeWorkApp {
      * Метод инвертирует переданный массив: с помощью цикла и условия заменяет 0 на 1, 1 на 0.
      *
      * @param arr Массив, элементами которого являются 0 и 1.
-     * @return Массив, в котором 0 заменены на 1, 1 на 0
      */
-    public static int[] invertArray(int[] arr) {
+    public static void invertArray(int[] arr) {
         // чтобы не считать длину массива на каждом шаге цикла, считаем в блоке инициализации
         for (int i = 0, l = arr.length; i < l; i++) {
             // вместо if.. else используем тернарный оператор
             arr[i] = (arr[i] > 0) ? 0 : 1;
         }
 
-        return arr;
+        // return arr; -- массив - ссылочный тип, поэтому return не нужен
     }
 
     /**
@@ -81,16 +82,13 @@ public class HomeWorkApp {
      * Проходит циклом по переданному массиву и умножает на 2 числа, которые меньше 6.
      *
      * @param arr Массив для изменения
-     * @return Итоговый массив
      */
-    public static int[] multiplyByTwoElementsLessThanSix(int[] arr) {
+    public static void multiplyByTwoElementsLessThanSix(int[] arr) {
         for (int i = 0, l = arr.length; i < l; i++) {
             if (arr[i] < 6) {
                 arr[i] *= 2;
             }
         }
-
-        return arr;
     }
 
     /**
@@ -104,12 +102,9 @@ public class HomeWorkApp {
         int[][] arr = new int[length][length];
 
         // элементам "по диаганалям" задаём значение 1
-        for (int i = 0; i < length; i++) {
-            for (int y = 0; y < length; y++) {
-                if (i == y || i == (length - 1 - y)) {
-                    arr[i][y] = 1;
-                }
-            }
+        for (int i = 0, y = length - 1; i < length; i++, y--) {
+            arr[i][i] = 1;
+            arr[i][y] = 1;
         }
 
         // выводим массив в консоль
@@ -134,8 +129,25 @@ public class HomeWorkApp {
         return arr;
     }
 
-    //* Задать одномерный массив и найти в нем минимальный и максимальный элементы ;
+    /**
+     * Находит в переданном одномерном массиве целых чисел минимальный и максимальный элементы.
+     *
+     * @param arr Одномерный массив чисел
+     */
     public static void findMinAndMax(int[] arr) {
+
+        // если массив нулевой длины, то нет смысла бежать по нему
+        if (arr.length == 0) {
+            System.out.println("Передан массив нулевой длины");
+            return;
+        }
+
+        // в массиве один элемент -> он и минимальный и максимальный
+        if (arr.length == 1) {
+            System.out.println("Минимальный элемент массива: " + arr[0] + ", максимальный элемент: " + arr[0]);
+            return;
+        }
+
         // инициализуем переменные первыми элементами переданного массива,
         // это можно было бы и в цикле сделать позже, но так проще далее использовать foreach для цикла
         int min = arr[0];
@@ -209,30 +221,46 @@ public class HomeWorkApp {
      * @return измененный массив
      */
     public static int[] shiftArray(int[] arr, int shift) {
-        // так как shift может быть больше длины массива, уменьшим его
-        shift = shift % arr.length;
 
-        // если сдвиг - ноль, то сразу возвращаем массив
-        if (shift == 0) {
+        int arrLength = arr.length;
+
+        // обрабатываем пограничные ситуации:
+        if (arrLength == 0 || shift == 0 || shift % arrLength == 0) {
             return arr;
         }
 
-        // приведем отрицательный shift к положительному
-        // здесь есть возможность оптимизации: в зависимости от того, где итераций меньше,
-        // оставлять либо сдвиг влево, либо вправо
-        if (shift < 0) {
-            shift = arr.length + shift;
+        // так как shift может быть больше длины массива, уменьшим его
+        shift %= arrLength;
+
+        // если нет задачи получить минимальное количество шагов, можно всегда сдвигать массив вправо
+        // это позволит убрать else ниже
+
+        // посчитаем, в какую сторону выгоднее сдвигать массив
+        int reverseShift = (shift < 0) ? shift + arrLength : shift - arrLength;
+        if (Math.abs(reverseShift) < Math.abs(shift)) {
+            shift = reverseShift;
         }
 
-        // 'shift' раз делаем сдвиг элементов массива вправо
-        for (int i = 0; i < shift; i++) {
-            // последовательно меняем значения первого элемента со вторым, третьим... последним.
-            // в итоге получаем сдвиг вправо на одну позицию
-            for (int y = 1; y < arr.length; y++) {
-                // трюк с заменой значений двух переменных без вспомогательной
-                arr[0] += arr[y];
-                arr[y] = arr[0] - arr[y];
-                arr[0] -= arr[y];
+        if (shift > 0) {
+            // 'shift' раз делаем сдвиг элементов массива вправо
+            for (int i = 0; i < shift; i++) {
+                // последовательно меняем значения первого элемента со вторым, третьим... последним.
+                // в итоге получаем сдвиг вправо на одну позицию
+                for (int y = 1; y < arr.length; y++) {
+                    // трюк с заменой значений двух переменных без вспомогательной
+                    arr[0] += arr[y];
+                    arr[y] = arr[0] - arr[y];
+                    arr[0] -= arr[y];
+                }
+            }
+        } else {
+            int lastElem = arrLength - 1;
+            for (int i = shift; i < 0; i++) {
+                for (int y = arrLength - 2; y >= 0; y--) {
+                    arr[lastElem] += arr[y];
+                    arr[y] = arr[lastElem] - arr[y];
+                    arr[lastElem] -= arr[y];
+                }
             }
         }
 
