@@ -241,30 +241,42 @@ public class HomeWorkApp {
             shift = reverseShift;
         }
 
+        // во внешнем цикле 'shift' раз делаем сдвиг элементов массива, во вложенном цикле
+        // последовательно меняем значения первого элемента со вторым, третьим... последним.
+        // в итоге получаем сдвиг вправо на одну позицию
         if (shift > 0) {
-            // 'shift' раз делаем сдвиг элементов массива вправо
             for (int i = 0; i < shift; i++) {
-                // последовательно меняем значения первого элемента со вторым, третьим... последним.
-                // в итоге получаем сдвиг вправо на одну позицию
                 for (int y = 1; y < arr.length; y++) {
-                    // трюк с заменой значений двух переменных без вспомогательной
-                    arr[0] += arr[y];
-                    arr[y] = arr[0] - arr[y];
-                    arr[0] -= arr[y];
+                    changeArrayElements(arr, 0, y);
                 }
             }
         } else {
-            int lastElem = arrLength - 1;
-            for (int i = shift; i < 0; i++) {
+            for (int i = shift, lastElem = arrLength - 1; i < 0; i++) {
                 for (int y = arrLength - 2; y >= 0; y--) {
-                    arr[lastElem] += arr[y];
-                    arr[y] = arr[lastElem] - arr[y];
-                    arr[lastElem] -= arr[y];
+                    changeArrayElements(arr, lastElem, y);
                 }
             }
         }
 
         return arr;
+    }
+
+    /**
+     * Метод, в котором реализован трюк с заменой значений двух переменных без вспомогательной переменной.
+     *
+     * @param arr Одномерный массив
+     * @param i Индекс первого эелемента
+     * @param y Индекс второго элемента
+     */
+    private static void changeArrayElements(int[] arr, int i, int y)
+    {
+        if (i < 0 || y < 0 || i >= arr.length || y >= arr.length) {
+            return;
+        }
+
+        arr[i] += arr[y];
+        arr[y] = arr[i] - arr[y];
+        arr[i] -= arr[y];
     }
 
     /**
