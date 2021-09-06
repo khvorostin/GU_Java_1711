@@ -13,7 +13,7 @@ public class HomeWorkApp {
 
         for (Employee employee : staff) {
             if (employee.getAge() > 40) {
-                System.out.println(employee.toString());
+                System.out.println(employee);
             }
         }
     }
