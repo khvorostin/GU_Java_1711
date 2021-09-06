@@ -1,7 +1,5 @@
 package course1.lesson5;
 
-import java.util.Date;
-
 public class Employee {
 
     private String fullName;
