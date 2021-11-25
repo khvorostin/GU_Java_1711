@@ -98,6 +98,8 @@ public class UIBuilder {
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
+                } finally {
+                    closeConnection();
                 }
             }
         }).start();
