@@ -1,6 +1,6 @@
 package course3.lesson1;
 
-public abstract class Fruit {
+public class Fruit {
 
     private final float weight;
 

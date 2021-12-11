@@ -2,7 +2,6 @@ package course3.lesson1;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class Main {
 
@@ -11,12 +10,16 @@ public class Main {
         // Задание 1. Написать метод, который меняет два элемента массива местами (массив может быть любого ссылочного типа).
 
         String[] stringsToReplace = {"lorem", "ipsum", "dolor", "sit", "amet"};
-        System.out.println(Arrays.toString(replaceElements(stringsToReplace, 1, 2)));
-        System.out.println(Arrays.toString(replaceElements(stringsToReplace, 0, 4)));
+        replaceElements(stringsToReplace, 1, 2);
+        System.out.println(Arrays.toString(stringsToReplace));
+        replaceElements(stringsToReplace, 0, 4);
+        System.out.println(Arrays.toString(stringsToReplace));
 
         Integer[] integersToReplace = {1, 2, 3, 4, 5};
-        System.out.println(Arrays.toString(replaceElements(integersToReplace, 1, 2)));
-        System.out.println(Arrays.toString(replaceElements(integersToReplace, 0, 4)));
+        replaceElements(integersToReplace, 1, 2);
+        System.out.println(Arrays.toString(integersToReplace));
+        replaceElements(integersToReplace, 0, 4);
+        System.out.println(Arrays.toString(integersToReplace));
 
         // Задание 2. Написать метод, который преобразует массив в ArrayList.
 
@@ -92,16 +95,14 @@ public class Main {
      * @param <T> Класс элементов переданного массива
      * @return Изменённый массив
      */
-    private static <T> T[] replaceElements(T[] array, int pos1, int pos2) {
+    private static <T> void replaceElements(T[] array, int pos1, int pos2) {
         if (pos1 < 0 || pos1 >= array.length || pos2 < 0 || pos2 >= array.length) {
             throw new IndexOutOfBoundsException("Передан некорректный идентификатор элемента");
         }
 
         T elem = array[pos2];
         array[pos2] = array[pos1];
-        array[pos1] = elem;
-
-        return array;
+        array[pos1] = elem;;
     }
 
     /**

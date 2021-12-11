@@ -2,25 +2,24 @@ package course3.lesson1;
 
 import java.util.ArrayList;
 
-public class Box {
+public class Box<T extends Fruit> {
 
-    private ArrayList<Fruit> fruitsInBox;
+    private ArrayList<T> fruitsInBox = new ArrayList<>();
     private int fruitsCounter;
     private String fruitName = "";
 
     /**
-     * Добвлят фрукт в ящик
+     * Добавляет фрукт в ящик
      *
      * @param fruit
      * @return Результат операции: true - фрукт добавлен в ящик, false - нет
      */
-    public boolean addOne(Fruit fruit) {
+    public boolean addOne(T fruit) {
         // определяем название фрукта
         String newFruitName = fruit.getClass().getSimpleName();
 
         // если коробка пуста, то запоминаем название первого фрукта
         if (0 == fruitsCounter) {
-            fruitsInBox = new ArrayList<>();
             fruitName = newFruitName;
         }
 
@@ -40,7 +39,7 @@ public class Box {
      *
      * @return
      */
-    public Fruit removeOne() {
+    public T removeOne() {
         if (fruitsCounter == 0) {
             throw new IndexOutOfBoundsException("Current box is empty");
         }
@@ -115,7 +114,7 @@ public class Box {
      * @return Результат пересыпания: true - если удалось пересыпать фрукты, false - если нет
      * (разные фрукты или в текущем ящике ничего нет)
      */
-    public boolean shiftTo(Box otherBox) {
+    public boolean shiftTo(Box<T> otherBox) {
         if (fruitName.equals(otherBox.getFruitName()) && fruitsCounter > 0) {
             while (fruitsCounter > 0) {
                 otherBox.addOne(removeOne());
