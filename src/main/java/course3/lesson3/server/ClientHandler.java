@@ -52,7 +52,7 @@ public class ClientHandler {
                 if (nick == null) {
                     sendMsg("App: Неверные логин/пароль");
                 } else if (!myServer.isNickBusy(nick)) {
-                    sendMsg("/authok " + nick);
+                    sendMsg("/authok " + nick + " " + parts[1]);
                     name = nick;
                     myServer.broadcastMsg("App: " + name + " зашел в чат");
                     myServer.subscribe(this);

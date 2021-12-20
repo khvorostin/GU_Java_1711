@@ -7,9 +7,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.net.Socket;
 import java.util.List;
 
@@ -30,8 +28,10 @@ public class UIBuilder {
 
     // название окна в шапке
     private String frameTitle;
-    // юзернейм (пока зашит жёстко)
+    // юзернейм
     private String userName = "Unauthtorized User [local]";
+
+    private String userLogin = "";
 
     // текстовая панель, на которой выводятся сообщения пользователей
     JTextPane chatTextPane;
@@ -132,6 +132,7 @@ public class UIBuilder {
                         if (strFromServer.contains("/authok")) {
                             parts = strFromServer.split("\\s");
                             setUserName(parts[1]); // сохраняем имя пользователя
+                            userLogin = parts[2]; // сохраняем логин пользователя
                             messagesBox.clearAll();
                             messagesBox.addMessage("App", "Вы авторизованы как " + parts[1]);
                             setConnected(true);
@@ -264,7 +265,12 @@ public class UIBuilder {
             public void keyPressed(KeyEvent e) {
                 if (e.getKeyCode() == KeyEvent.VK_ENTER) {
                     try {
-                        out.writeUTF(textPane.getText());
+                        String msg = textPane.getText();
+                        if (msg.equals("/save")) {
+                            saveToFile();
+                        } else {
+                            out.writeUTF(msg);
+                        }
                     } catch (IOException ioException) {
                         ioException.printStackTrace();
                     }
@@ -349,5 +355,18 @@ public class UIBuilder {
         c.gridy = 4;
         c.insets = new Insets(5,0,0,0);  //top padding
         c.anchor = GridBagConstraints.PAGE_END; // bottom of space
+    }
+
+    private void saveToFile() {
+        try (
+            FileWriter fw = new FileWriter("history_" + userLogin + ".txt", true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            PrintWriter out = new PrintWriter(bw);
+        ) {
+            String txt = chatTextPane.getText();
+            out.println(txt);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
