@@ -5,6 +5,7 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
 import java.sql.SQLException;
+import java.util.List;
 
 public class ClientHandler {
 
@@ -12,6 +13,7 @@ public class ClientHandler {
     private Socket socket;
     private DataInputStream in;
     private DataOutputStream out;
+    private JdbcApp jdbcApp = new JdbcApp();
 
     private String name;
 
@@ -56,6 +58,10 @@ public class ClientHandler {
                     name = nick;
                     myServer.broadcastMsg("App: " + name + " зашел в чат");
                     myServer.subscribe(this);
+                    List<String> messagesHistory = jdbcApp.getHistoryForNick(nick);
+                    for (String msg : messagesHistory) {
+                        myServer.unicastMsg(nick, msg);
+                    }
                     return;
                 } else {
                     sendMsg("App: Учетная запись уже используется");
@@ -78,9 +84,11 @@ public class ClientHandler {
                 if (parts.length == 3) {
                     myServer.unicastMsg(name, name + ": " + parts[2] + " [Личное сообщение]");
                     myServer.unicastMsg(parts[1], name + ": " + parts[2]);
+                    jdbcApp.saveMessageInDB(name, parts[1], parts[2]);
                 }
             } else {
                 myServer.broadcastMsg(name + ": " + strFromClient);
+                jdbcApp.saveMessageInDB(name, null, strFromClient);
             }
         }
     }
