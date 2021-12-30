@@ -4,6 +4,7 @@ import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
+import java.sql.SQLException;
 
 public class ClientHandler {
 
@@ -30,7 +31,7 @@ public class ClientHandler {
                     this.socket.setSoTimeout(120000); // 2 минуты ждем и закрываем соединение
                     authentication();
                     readMessages();
-                } catch (IOException e) {
+                } catch (IOException | SQLException e) {
                     e.printStackTrace();
                 } finally {
                     System.out.println("Закрываем соединение");
@@ -42,7 +43,7 @@ public class ClientHandler {
         }
     }
 
-    public void authentication() throws IOException {
+    public void authentication() throws IOException, SQLException {
         while (true) {
             String str = in.readUTF();
             if (str.startsWith("/auth")) {
