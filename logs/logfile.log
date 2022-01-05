@@ -1,0 +1,109 @@
+INFO  2022-01-05 20:35:09 [main] course3.lesson6.server.BaseAuthService (BaseAuthService.java:16) - Сервис аутентификации запущен
+INFO  2022-01-05 20:35:09 [main] course3.lesson6.server.MyServer (MyServer.java:38) - Сервер ожидает подключения
+INFO  2022-01-05 20:35:22 [main] course3.lesson6.server.MyServer (MyServer.java:40) - Клиент подключился
+INFO  2022-01-05 20:35:22 [main] course3.lesson6.server.MyServer (MyServer.java:38) - Сервер ожидает подключения
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - </authok nick1 login1>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:70) - nick1 зашёл в чат
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick2: Ты хочешь сказать — бедный Бобби.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick1: Нет, это я про его жену. Ее тоже звали Бобби. Бобби Уотсон. Из-за этого совпадения их вечно путали, когда видели вместе. Только после его смерти и разобрались наконец, кто из них кто. Да и сейчас еще находятся люди, которые путают ее с покойником и приносят ей соболезнования. Ты с ней знаком?>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick2: Я только раз ее видел, совершенно случайно, на похоронах Бобби.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick1: А я никогда не видела. Она хорошенькая?>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick2: Черты у нее правильные, но хорошенькой ее не назовешь. Слишком толстенная и большая. Черты у нее неправильные, но она, можно сказать, очень даже хорошенькая. Только чересчур хрупкая и маленькая. Она учительница пения.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick1: И когда они надумали пожениться?>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick2: Самое позднее весной.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick1: Надо будет пойти на свадьбу.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick2: Надо свадебный подарок преподнести. Я вот думаю — что подарить?>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick1: Почему бы не пожертвовать им одно из семи серебряных блюд из тех, которые нам подарили на свадьбу и которые нам ни разу не пригодились? Как печально в столь юные годы остаться вдовой.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick2: Счастье еще, что нет детей.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick1: Только этого не хватало! Что бы бедняжка с ними делала?>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick2: Она еще молодая. Прекрасно снова выйдет замуж. Траур ей к лицу.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick1: А кто о детях будет заботиться? Ты же знаешь, у них мальчик и девочка. Как их зовут?>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick2: Бобби и Бобби — в честь родителей. Дядя Бобби Уотсона, старый Бобби Уотсон, большой богач и он любит мальчика. Уж как-нибудь позаботится о воспитании Бобби.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick1: Еще бы! А тетка Бобби Уотсона, старая Бобби Уотсон, уж как-нибудь может заняться воспитанием Бобби Уотсон, дочки Бобби Уотсона. И тогда мама Бобби Уотсон, Бобби, сможет снова выйти замуж. Есть у нее кто-нибудь на примете?>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick2: Да, кузен Бобби Уотсона.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick1: Это Бобби Уотсон?>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick2: Ты про какого Бобби Уотсона?>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick1: Про Бобби Уотсона, сына старого Бобби Уотсона, другого дяди Бобби Уотсона, который умер.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick2: Нет, это не он. Это Бобби Уотсон, сын старой Бобби Уотсон, тетки Бобби Уотсона, который умер.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick1: То есть это Бобби Уотсон — коммивояжер.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick2: Все Бобби Уотсоны — коммивояжеры.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick1: Какая трудная профессия! Но довольно доходная.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick2: Да, если нет конкуренции.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick1: А когда нет конкуренции?>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick2: По вторникам, четвергам и вторникам.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick1: Да? Три раза в неделю? И что же делает в это время Бобби Уотсон?>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick2: Спит, отдыхает.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick1: Почему же он не работает в эти три дня, когда нет конкуренции?>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick2: Я не обязан все знать. Я не обязан отвечать на все твои идиотские вопросы!>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick1: Это ты так говоришь, чтоб меня унизить?>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick2: Да нет же, ничего подобного, и ты это знаешь.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick1: Все вы мужчины одинаковы: целый день не выпускаете сигареты изо рта, либо по пятьдесят раз на день пудритесь, красите губы, если только не напиваетесь до бесчувствия.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick2: Ну, а ты хотела, чтоб мужчины вели себя как женщины — целый день курили, пудрились, мазались помадой и дули виски?>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick1: Ну и что? Подумаешь! Но если ты все это говоришь, чтоб меня позлить, так я... я не люблю подобных шуток, и ты это знаешь!>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick2: Ах, куреночек мой жареный! Зачем же так кипятиться? Ты ведь знаешь, что я это все для смеха! Какая мы трогательная парочка старых влюбленных! Давай погасим свет и приляжем бай-бай.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick3: Я служанка. Я очень приятно провела вечер. Я была в кино с мужчиной и смотрела фильм с женщинами. После кино мы пили водку с молоком, потом мы читали газету.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick1: Я надеюсь, вы очень приятно провели вечер, если вы были в кино с мужчиной и пили водку с молоком.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick2: И газету!>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick3: Ваши гости, мистер Мартин с супругой, стоят у двери. Они меня ждали, потому что сами не решались войти. Они должны были сегодня ужинать с вами.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick1: Ах да! Мы их ждали. Но потом мы проголодались, а они все не шли, и мы поели без них. Мэри, зачем же вы ушли!>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick3: Вы сами меня отпустили.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick2: Это не нарочно!>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick3: Я купила себе ночной горшок.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick1: Милая моя Мэри, будьте так добры, откройте дверь и попросите войти мистера Мартина с супругой. А мы пока быстренько переоденемся.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick3: Почему вы так поздно? Это невоспитанно. Надо вовремя приходить. Ясно? Ладно, садитесь уж, ждите.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick2: Как это удивительно, как это удивительно, как это удивительно и какое совпадение. Знаете ли, в спальне у меня кровать с зеленой периной. Эта спальня с этой кроватью и с этой зеленой периной находится в конце коридора между клозетом и библиотекой, мадам!>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick5: Какое совпадение, о Боже, какое совпадение! И у меня в спальне стоит кровать с зеленой периной, и она тоже находится в конце коридора между клозетом, мсье, и библиотекой!>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick4: Как это странно, удивительно, непостижимо! Так, значит, мадам, мы живем в одной комнате и спим в одной постели. Может быть, там-то мы и встречались?>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick5: Как удивительно и какое совпадение! Вполне возможно, мы там и встречались и, возможно, даже вчера ночью. Но я ничего не помню, мсье!>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick4: У меня есть дочка, она живет со мной вместе, мадам. Ей два годика, она светленькая, у нее один глаз белый, другой красный, она прехорошенькая, ее зовут Алиса, мадам.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick5: Какое странное совпадение! У меня тоже есть дочка, ей два годика, у нее один глаз белый, другой красный, она прехорошенькая, и ее тоже зовут Алиса, мсье!>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick2: Как это удивительно и какое совпадение! И странно! Может быть, это та же самая девочка, мадам!>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick3: Элизабет и Дональд сейчас так счастливы, что, конечно, не слышат меня. А я открою вам один секрет. Элизабет — не Элизабет, Дональд — не Дональд. И вот доказательство: ребенок, о котором говорил Дональд, — не дочь Элизабет, это не одно и то же лицо. У дочки Дональда один глаз белый, другой красный — в точности как у дочки Элизабет. Но тогда как у ребенка Дональда правый глаз белый, а левый глаз красный, у ребенка Элизабет левый глаз белый, а правый глаз красный! Таким образом, система доказательств Дональда рушится, наткнувшись на это последнее препятствие, которое сводит на нет всю его теорию. Несмотря на редкостные совпадения, кажущиеся неопровержимыми доказательствами, Дональд и Элизабет, не будучи родителями одного и того же ребенка, не являются Дональдом и Элизабет. Он может сколько угодно считать себя Дональдом, она может воображать себя Элизабет. Он может сколько угодно думать, что она Элизабет. Она может сколько угодно считать его Дональдом. Оба горько заблуждаются. Но кто же истинный Дональд? Кто истинная Элизабет? Кому надо, чтоб продолжалась эта путаница? Я не знаю. И не будем пытаться узнать. Пусть все остается как есть. Мое настоящее имя Шерлок Холмс.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick1: Добрый вечер, друзья! Простите, что так долго вас заставили ждать. Мы сочли, что надо оказать вам честь, которая вам подобает, и, прослышав, что вы надумали сюрпризом нагрянуть к нам в гости без предупреждения, мы поспешили припарадиться.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick2: Мы целый день не ели. Мы вас прождали четыре часа. Почему вы так опоздали?>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick2: Хм.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick1: Хм, хм.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick5: Хм, хм, хм.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick4: Хм, хм, хм.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick2: А ведь совсем не холодно.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick1: И никакого сквозняка.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick2: Ах-ляля-ляля.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick1: Нет. Он вредничает.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick2: У сердца нет возраста.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick1: Так говорят.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick2: Истина где-то посередине.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick1: Вот вы так много путешествуете, так много видите, рассказали бы что-нибудь интересное.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick4: Расскажи-ка, милая, что ты сегодня видела.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick2: Мы вам полностью доверяем!>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick1: Вы нас просто обижаете!>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick2: Ты их просто обижаешь! [Личное сообщение]>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick5: Ах, я сегодня видела что-то удивительное. Что-то невероятное.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick2: Вот мы и развлечемся.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick1: Давно пора.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick5: Так вот, значит, иду я сегодня на рынок купить овощей, а они все дорожают...>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick1: Ну и что?>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick2: Не перебивай, моя лапка. Мерзавка.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick5: И вдруг вижу возле кафе прилично одетого господина лет пятидесяти, и он...>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick2: Что — он?>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick1: Что — он?>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick2: Не перебивай, моя лапка. Ты отвратительна. [Личное сообщение]>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick1: Лапка моя, это ты первый перебил. Ты хам. [Личное сообщение]>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick4: Тсс! Так что же он делал?>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick4: О-о!>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick2: О-о!>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick1: О-о!>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick5: Да, нагнулся.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick2: Невероятно!>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick5: Да, он нагнулся... Я подошла поглядеть, что же такое он делает...>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick2: И что же?>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick5: Он завязывал шнурки. Они у него развязались.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick4: Фантастика!>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick2: Фантастика!>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick1: Фантастика!>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick2: Если б это не вы, я б ни за что не поверил!>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick4: А что? Когда много ходишь по городу, еще и не на такое насмотришься. Сегодня, например, в метро я видел человека, который преспокойно сидел и читал газету.>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick1: Какой оригинал!>
+INFO  2022-01-05 20:35:31 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:108) - <nick2: Так, может, это тот же самый?>
+ERROR 2022-01-05 20:36:00 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:43) - Connection reset
+INFO  2022-01-05 20:36:00 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:46) - Закрываем соединение
+INFO  2022-01-05 20:36:00 [pool-2-thread-1] course3.lesson6.server.ClientHandler (ClientHandler.java:118) - nick1 вышел из чата
